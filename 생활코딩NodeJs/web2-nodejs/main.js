@@ -11,8 +11,9 @@ let app = http.createServer((request, response) => {
   console.log(queryData.id);
   let title = queryData.id;
 
-  if (_url === "/") {
-    _url = "/index.html";
+  if (_url === "/" || _url === "/index.html") {
+    // _url = "/index.html";
+    title = "Welcome";
   }
 
   if (_url === "/favicon.ico") {
